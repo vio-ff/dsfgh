@@ -1,6 +1,12 @@
 <template>
     <div :class="'armour-card ' + rare">
-        <div class="image-class"></div>
+        <v-img 
+            class="image-class ma-0 pa-0" 
+            cover 
+            :src="image"
+            :width="300"
+            aspect-ratio="1"
+        ></v-img>
         <p class="card-title">
             {{ title + " (" + price + "$)" }}
         </p>
@@ -24,13 +30,19 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  image: {
+    type: String,
+    default: null
+  }
+
 })
+
+// const imgurl = "https://i.pinimg.com/originals/b8/d7/cb/b8d7cbd2cb64a6469e2f98f57f82cbdd.jpg"
 // https://steamuserimages-a.akamaihd.net/ugc/2173609908980279956/49D9BB59532CCCAB1D4E0A89505115C1AE526ED1/?imw=5000&amp;imh=5000&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false
 
 // https://i.pinimg.com/736x/06/86/71/068671953deddfc6b6fb49c41878e1da.jpg
 
 </script>
-
 
 <style scoped>
 .armour-card {
@@ -38,11 +50,12 @@ const props = defineProps({
     border-radius: 24px;
     padding: 8px;
     margin: 16px;
+    transition: 0.3s
 }
 
 .armour-card:hover {
     background-color: #E6E6E6;
-    /* padding: 6px; */
+    scale: 1.1;
 }
 
 .leg {
@@ -68,18 +81,11 @@ const props = defineProps({
 
 
 .image-class {
-    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/2173609908980279956/49D9BB59532CCCAB1D4E0A89505115C1AE526ED1/?imw=5000&amp;imh=5000&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false);
-    background-size: 105% auto;
-    background-position: center center;
-    width: 300px;
-    height: 300px;
     border-radius: 24px;
-    /* padding: 4px; */
 }
 
 
 .image-class:hover {
-    background-image: url(https://i.pinimg.com/originals/7f/e2/c3/7fe2c36b3b66608fecf9ced51ef6b172.jpg);
     background-size: fill;
     background-position: top center;
 }

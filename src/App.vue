@@ -161,9 +161,24 @@ let cars = ref(
 
 <template>
   <v-row>
-    <ArmourCard title="Легендарка" price="9000" rare="leg"></ArmourCard>
-    <ArmourCard title="Рарка" price="700" rare="epic"></ArmourCard>
-    <ArmourCard title="Обычная" price="70"></ArmourCard>
+    <ArmourCard 
+      title="Легендарка" 
+      price="9000" 
+      rare="leg" 
+      image="https://i.pinimg.com/originals/b8/d7/cb/b8d7cbd2cb64a6469e2f98f57f82cbdd.jpg"
+    ></ArmourCard>
+    <ArmourCard 
+      title="Рарка" 
+      price="700" 
+      rare="epic" 
+      image="https://steamuserimages-a.akamaihd.net/ugc/2173609908980279956/49D9BB59532CCCAB1D4E0A89505115C1AE526ED1/?imw=5000&amp;imh=5000&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false"
+    ></ArmourCard>
+    <ArmourCard 
+      title="Обычная" 
+      price="70"
+      image="https://i.pinimg.com/originals/7f/e2/c3/7fe2c36b3b66608fecf9ced51ef6b172.jpg"
+    ></ArmourCard>
+
   </v-row>
   <!-- <p v-for="i in cars">
     {{ i }}
